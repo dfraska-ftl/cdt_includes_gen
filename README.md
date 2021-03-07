@@ -18,6 +18,7 @@ Python 3.6+
     optional arguments:
       -h, --help     show this help message and exit
       -v, --verbose  turn on verbose mode
+      -r, --relative turn on relative mode with the given path as the root
       --ignore-c     ignore C header files
       --ignore-cpp   ignore C++ header files
       
