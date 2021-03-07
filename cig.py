@@ -22,7 +22,7 @@ def folders(root, fileSuffixes) :
 
     return folders
 
-def generateXML(outFileName, CIncludes, CppIncludes):
+def generateXML(outFileName, CIncludes, CppIncludes, relPath):
     """
         Generate Eclipse CDT settings XML file with C and C++ includes.
 
@@ -42,6 +42,8 @@ def generateXML(outFileName, CIncludes, CppIncludes):
             if lst:
                 outFile.write ('<language name="' + name +' Source File">\n') 
                 for directory in lst:
+                    if relPath != None:
+                        directory = os.sep + os.path.relpath(directory, relPath)
                     outFile.write('<includepath>' + directory + '</includepath>' + '\n')
                 outFile.write('</language>\n')
         outFile.write('</section>\n')
