@@ -6,6 +6,9 @@ In the Project->Properties->C/C++ General->Paths and Symbols->Includes you have 
 * Go through your project file structure, identify directories containing header files and Add manually record for each one of them.
 * Or use this script to do it for you and Import the generated XML settings file.
 
+# Requirements
+Python 3.6+
+
 # Usage
     usage: gen_cdt_settings.py [-h] [-v] [--ignore-c] [--ignore-cpp] out_file
 
