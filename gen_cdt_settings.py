@@ -23,8 +23,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate includes settings for Eclipse CDT project.')
     parser.add_argument('out_file', help='specify the output file filename')
     parser.add_argument('-v', '--verbose', help='turn on verbose mode', action="store_true")
-    parser.add_argument('-r', '--relative', type=pathlib.Path,
-                        help='turn on relative mode with the given path as the root')
+    parser.add_argument('-r', '--relative', type=pathlib.Path, metavar='PATH',
+                        help='turn on relative mode with the given PATH as the root')
     parser.add_argument('--ignore-c', help='ignore C header files', action="store_true")
     parser.add_argument('--ignore-cpp', help='ignore C++ header files', action="store_true")
     args = parser.parse_args()   
