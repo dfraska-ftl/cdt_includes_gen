@@ -6,6 +6,9 @@ In the Project->Properties->C/C++ General->Paths and Symbols->Includes you have 
 * Go through your project file structure, identify directories containing header files and Add manually record for each one of them.
 * Or use this script to do it for you and Import the generated XML settings file.
 
+# Requirements
+Python 3.6+
+
 # Usage
     usage: gen_cdt_settings.py [-h] [-v] [--ignore-c] [--ignore-cpp] out_file
 
@@ -15,6 +18,7 @@ In the Project->Properties->C/C++ General->Paths and Symbols->Includes you have 
     optional arguments:
       -h, --help     show this help message and exit
       -v, --verbose  turn on verbose mode
+      -r, --relative turn on relative mode with the given path as the root
       --ignore-c     ignore C header files
       --ignore-cpp   ignore C++ header files
       
